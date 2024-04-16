@@ -19,25 +19,29 @@ public class CalculatorController {
     public String hello() {
         return "Добро  пожаловать в калькулятор ";
     }
-    @GetMapping( "/plus")
-    public String sum(@RequestParam int num2, @RequestParam  int num3 ) {
-        int result = service.sum(num2, num3);
-        return  num2 +" + " + num3 + " = " + result;
+
+    @GetMapping("/plus")
+    public String sum(@RequestParam int num1, @RequestParam int num2) {
+        int result = service.sum(num1, num2);
+        return num1 + " + " + num2 + " = " + result;
     }
-    @GetMapping( "/minus")
-    public String subtract(@RequestParam int num2,@RequestParam  int num3 ) {
-        int result = service.subtract(num2, num3);
-        return  num2 +" - " + num3 + " = " + result;
+
+    @GetMapping("/minus")
+    public String subtract(@RequestParam int num1, @RequestParam int num2) {
+        int result = service.subtract(num1, num2);
+        return num1 + " - " + num2 + " = " + result;
     }
-    @GetMapping( "/multiply")
-    public String multiply(@RequestParam int num2,@RequestParam  int num3 ) {
-        int result = service.multiply(num2, num3);
-        return  num2 +" * " + num3 + " = " + result;
+
+    @GetMapping("/multiply")
+    public String multiply(@RequestParam int num1, @RequestParam int num2) {
+        int result = service.multiply(num1, num2);
+        return num1 + " * " + num2 + " = " + result;
     }
-    @GetMapping( "/divide")
-    public String divide(@RequestParam int num2,@RequestParam  int num3 ) {
-        float result = service.divide(num2, num3);
-        return  num2 +" / " + num3 + " = " + result;
+
+    @GetMapping("/divide")
+    public String divide(@RequestParam int num1, @RequestParam int num2) {
+        int result = service.divide(num1, num2);
+        return num1 + " / " + num2 + " = " + result;
     }
 }
 
