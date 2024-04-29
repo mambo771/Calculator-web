@@ -4,42 +4,50 @@ import Calculatorweb.Calculatorweb.exception.ZeroDivideException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static Calculatorweb.Calculatorweb.CalculatorConstains.*;
+import static Calculatorweb.Calculatorweb.CalculatorConstans.*;
 class CalculatorServiceImplTest {
     private final CalculatorServiceImpl service= new CalculatorServiceImpl();
 
     @Test
     void shouldReturnCorrectSum1() {
-        assertEquals(ONE+TWO, service.sum(ONE,TWO));
+        int result= service.sum(ONE,TWO);
+        assertEquals(ONE+TWO, result);
     }
     @Test
     void shouldReturnCorrectSum2() {
-        assertEquals(THREE+TWO, service.sum(THREE,TWO));
+        int result= service.sum(THREE,TWO);
+        assertEquals(THREE+TWO,result);
     }
     @Test
     void shouldReturnCorrectSub1() {
-        assertEquals(THREE-TWO, service.subtract(THREE,TWO));
+        int result= service.subtract(THREE,TWO);
+        assertEquals(THREE-TWO,result);
     }
     @Test
     void shouldReturnCorrectSub2() {
-        assertEquals(TWO-ONE, service.subtract(TWO,ONE));
+        int result= service.subtract(TWO,ONE);
+        assertEquals(TWO-ONE, result);
     }
 
     @Test
     void shouldReturnCorrectMultiply1() {
-        assertEquals(TWO*ONE, service.multiply(TWO,ONE));
+        int result= service.multiply(TWO,ONE);
+        assertEquals(TWO*ONE, result);
     }
     @Test
     void shouldReturnCorrectMultiply2() {
-        assertEquals(TWO*TWO, service.multiply(TWO,TWO));
+        int result= service.multiply(TWO,TWO);
+        assertEquals(TWO*TWO, result);
     }
     @Test
     void shouldReturnCorrectDivide1() {
-        assertEquals(TWO/TWO, service.divide(TWO,TWO));
+        int result= service.divide(TWO,TWO);
+        assertEquals(TWO/TWO, result);
     }
     @Test
     void shouldReturnCorrectDivide2() {
-        assertEquals(THREE/ONE, service.divide(THREE,ONE));
+        int result= service.divide(THREE,ONE);
+        assertEquals(THREE/ONE, result);
     }
     @Test
     void  shouldThrowZeroDivideException(){
